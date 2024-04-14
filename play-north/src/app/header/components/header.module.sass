@@ -1,0 +1,37 @@
+.header
+  padding: 16px 40px
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.20)
+  display: flex
+  align-items: center
+  justify-content: space-between
+  column-gap: 20px
+
+  & .headerLogo
+    cursor: pointer
+
+  @media (max-width: 700px), (width: 700px)
+    flex-direction: column
+    row-gap: 20px
+    padding: 16px
+    justify-content: unset
+
+  & .headerCompanyNameAndLobbyTypes
+    display: flex
+    align-items: center
+    column-gap: 20px
+
+    @media (max-width: 700px), (width: 700px)
+      flex-direction: column
+      row-gap: 20px
+
+    & .companyName
+      margin: unset
+
+    & .lobbyType
+      text-decoration: unset
+      color: black
+      cursor: pointer
+
+      &.selectedLobbyType
+        color: #E45635
+        text-decoration: underline
