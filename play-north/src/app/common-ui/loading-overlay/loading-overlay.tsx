@@ -6,7 +6,7 @@ import {RootState} from '@/redux/store';
 
 const LoadingOverlay = () => {
     const isLoading = useSelector((state: RootState) => state.loading.isLoading);
-    // console.log('isLoading', isLoading);
+
     return (
         <>
             {isLoading && (

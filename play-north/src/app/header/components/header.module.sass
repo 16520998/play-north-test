@@ -6,7 +6,7 @@
   justify-content: space-between
   column-gap: 20px
 
-  & .headerLogo
+  & .header-logo
     cursor: pointer
 
   @media (max-width: 700px), (width: 700px)
@@ -15,7 +15,7 @@
     padding: 16px
     justify-content: unset
 
-  & .headerCompanyNameAndLobbyTypes
+  & .header-company-name-and-lobby-types
     display: flex
     align-items: center
     column-gap: 20px
@@ -24,14 +24,14 @@
       flex-direction: column
       row-gap: 20px
 
-    & .companyName
+    & .company-name
       margin: unset
 
-    & .lobbyType
+    & .lobby-type
       text-decoration: unset
       color: black
       cursor: pointer
 
-      &.selectedLobbyType
-        color: #E45635
-        text-decoration: underline
+.selected-lobby-type
+  font-weight: bold
+  text-decoration: underline
