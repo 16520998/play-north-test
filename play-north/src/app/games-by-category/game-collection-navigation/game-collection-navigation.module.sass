@@ -1,0 +1,49 @@
+.gameCollectionNavigation
+  display: flex
+  align-items: center
+  justify-content: center
+  column-gap: 20px
+
+  //TODO: change to match code convention
+  & .gameCollectionNavigationButtonNext
+    background-color: black
+    border: none
+    color: white
+    padding: 8px
+    text-align: center
+    text-decoration: none
+    display: inline-block
+    font-size: 16px
+    margin: 4px 2px
+    cursor: pointer
+    border-radius: 4px
+
+    position: fixed
+    right: 8px
+    top: 50%
+    transform: translateY(-50%)
+    
+    &:disabled
+      background-color: grey
+      cursor: unset
+
+  & .gameCollectionNavigationButtonPrev
+    background-color: black
+    border: none
+    color: white
+    padding: 8px
+    text-align: center
+    text-decoration: none
+    display: inline-block
+    font-size: 16px
+    margin: 4px 2px
+    cursor: pointer
+    border-radius: 4px
+    position: fixed
+    left: 8px
+    top: 50%
+    transform: translateY(-50%)
+
+    &:disabled
+      background-color: grey
+      cursor: unset

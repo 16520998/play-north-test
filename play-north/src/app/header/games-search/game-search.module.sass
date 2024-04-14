@@ -1,0 +1,39 @@
+.games-search
+  position: relative
+  margin: 30px 0 10px
+
+  & .games-search--close-button
+    position: absolute
+    top: 12px
+    right: 20px
+    cursor: pointer
+
+  & .games-search--input
+    width: calc(100% - 40px)
+    height: 44px
+    border-radius: 50px
+    background: #F8F8F8
+    padding-inline: 0
+    padding: 0 20px
+
+    //@media (max-width: 700px), (width: 700px)
+    //  //width: 100%
+
+  & .games-result
+    display: flex
+    flex-direction: column
+    row-gap: 12px
+    position: absolute
+    right: 0
+    top: 60px
+    padding: 12px 12px 0
+    background-color: #f9f9f9
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3)
+    z-index: 1
+    width: 100%
+    max-height: 316px
+    overflow-y: auto
+    border-radius: 4px
+
+  & .game-dropdown--hidden
+    display: none
