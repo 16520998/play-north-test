@@ -27,6 +27,7 @@ const HomePage = ({category, defaultGameData}: {
     return (
         <div className={homePageStyle.container}>
             <GameSearch onSearch={onSearch} ></GameSearch>
+
             <GamesByCategory
                 searchText={searchText}
                 category={category}

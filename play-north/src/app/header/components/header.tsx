@@ -23,7 +23,7 @@ const Header = ({menu}: { menu: Menu }) => {
         },
         {
             name: 'Live Lobby',
-            href: menu?.lobby?.items[0].path,
+            href: menu?.liveLobby?.items[0].path,
             value: 'liveLobby',
             lobby: 'live-casino'
         }
@@ -40,10 +40,10 @@ const Header = ({menu}: { menu: Menu }) => {
     const lobbyTypes = buildLobbyTypes(menu, links, lobby, goToLobbyPage);
 
     return (
-        <div className={headerStyle.header}>
-            <div className={headerStyle.headerCompanyNameAndLobbyTypes}>
-                <div className={headerStyle.headerLogo} onClick={goToHomePage}>
-                    <h3 className={headerStyle.companyName}>PLAY NORTH</h3>
+        <div className={headerStyle['header']}>
+            <div className={headerStyle['header-company-name-and-lobby-types']}>
+                <div className={headerStyle['header-logo']} onClick={goToHomePage}>
+                    <h3 className={headerStyle['company-name']}>PLAY NORTH</h3>
                 </div>
 
                 {lobbyTypes}
@@ -62,7 +62,7 @@ const buildLobbyTypes = (
         <div
             onClick={() => goToLobbyPage(menu, link)}
             key={link.name}
-            className={lobby === link.lobby ? headerStyle.selectedLobbyType : headerStyle.lobbyType}
+            className={lobby === link.lobby ? headerStyle['selected-lobby-type'] : headerStyle['lobby-type']}
         >
             {link.name}
         </div>

@@ -1,6 +1,7 @@
 'use server';
 
 import axios from "axios";
+import LobbyCategory from "@/app/games-by-category/interfaces/lobby-category";
 
 const API_URI = process.env.NEXT_PUBLIC_API_URI;
 
@@ -29,7 +30,12 @@ export const getMenuGame = async () => {
 export const getLobbyCategories = async () => {
   const data = await getGameConfig();
 
-  return data.menu.lobby.items;
+  return serializeLobbyCategories(data.menu.lobby.items);
+  // return data.menu.lobby.items;
+}
+
+const serializeLobbyCategories = (lobbyCategories: LobbyCategory[]) => {
+  return lobbyCategories.filter((lobbyCategory) => lobbyCategory.name !== 'Lobby');
 }
 
 export const getLiveLobbyCategories = async () => {
